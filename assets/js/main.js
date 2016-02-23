@@ -23,7 +23,7 @@
 		
 		Packagist.feed({
 			vendor: 'jr',
-			selector: '#packagist-feed',
+			selector: '#packagist-feed'
 		});
 	});
 })(jQuery, window, document);

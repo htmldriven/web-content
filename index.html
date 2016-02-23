@@ -22,9 +22,12 @@
 
 		<!-- github calendar css -->
 		<link rel="stylesheet" href="assets/plugins/github-calendar/dist/github-calendar.css">
-		<!-- github acitivity css -->
+		<!-- github activity css -->
 		<link rel="stylesheet" href="assets/plugins/github-activity/src/github-activity.css">
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+		
+		<!-- packagist feed cs -->
+		<link rel="stylesheet" href="assets/plugins/packagist-feed/src/packagist.feed.css">
 
 		<!-- Theme CSS -->  
 		<link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
@@ -142,6 +145,12 @@
 							<div id="ghfeed" class="ghfeed"></div>
 						</div>
 					</section>
+					<section class="packages section">
+						<div class="section-inner">
+							<h2 class="heading">My Packages</h2>
+							<div id="packagist-feed" class="pf pf-default"></div>
+						</div>
+					</section>
 				</div>
 				<div class="secondary col-md-4 col-sm-12 col-xs-12">
 					<aside class="info aside section">
@@ -254,8 +263,8 @@
                 <small class="copyright">Designed with <i class="fa fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
 			</div>
 		</footer>
-
-		<!-- Javascript -->          
+		
+		<!-- common JS plugins -->
 		<script type="text/javascript" src="assets/plugins/jquery-1.11.3.min.js"></script>
 		<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="assets/plugins/jquery-rss/dist/jquery.rss.min.js"></script> 
@@ -266,6 +275,8 @@
 		<!-- github activity plugin -->
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
 		<script type="text/javascript" src="assets/plugins/github-activity/src/github-activity.js"></script>
+		<!-- packagist feed plugin -->
+		<script type="text/javascript" src="assets/plugins/packagist-feed/src/packagist.feed.js"></script>
 		<!-- custom js -->
 		<script type="text/javascript" src="assets/js/main.js"></script>
 		

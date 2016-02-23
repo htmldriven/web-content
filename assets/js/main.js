@@ -14,8 +14,16 @@
 		
 		$('.level-label').tooltip();
 
-		GitHubCalendar("#github-graph", "rebendajirijr");
+		GitHubCalendar('#github-graph', 'rebendajirijr');
 		
-		GitHubActivity.feed({ username: "rebendajirijr", selector: "#ghfeed" });
+		GitHubActivity.feed({
+			username: 'rebendajirijr',
+			selector: '#ghfeed'
+		});
+		
+		Packagist.feed({
+			vendor: 'jr',
+			selector: '#packagist-feed',
+		});
 	});
 })(jQuery, window, document);

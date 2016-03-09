@@ -152,7 +152,20 @@ var Packagist = (function(document, undefined) {
 			
 			container.innerHTML = '';
 			container.appendChild(headerElement);
-			container.appendChild(list);
+			
+			if (packages.length > 0) {
+				container.appendChild(list);
+			} else {
+				var noPackagesFoundAlertElement = document.createElement('div');
+				var noPackagesFoundMessageElement = document.createElement('p');
+				
+				noPackagesFoundMessageElement.appendChild(document.createTextNode('No packages found.'));
+				
+				noPackagesFoundAlertElement.setAttribute('class', 'alert alert-danger');
+				noPackagesFoundAlertElement.appendChild(noPackagesFoundMessageElement);
+				
+				container.appendChild(noPackagesFoundAlertElement);
+			}
 		}
 	};
 	

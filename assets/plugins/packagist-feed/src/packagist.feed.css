@@ -27,6 +27,7 @@
 .pf .pf-package-item{padding:5px 15px;margin-bottom:10px;list-style-type:none;border-radius:4px;background:#FFF;}
 .pf .pf-package-item::before{display:table;content:' ';}
 .pf .pf-package-item::after{display:table;content:' ';clear:both;}
+.pf .pf-package-item:last-child{margin-bottom:0;}
 
 .pf .pf-package-info{width:86.66%;float:left;padding-left:15px;padding-right:15px;}
 
@@ -39,3 +40,7 @@
 .pf .pf-package-stats{width:13.33%;float:left;font-size:15px;color:#555;padding-left:15px;padding-right:15px;}
 .pf .pf-package-stats .pf-stats-item{display:block;margin-bottom:10px;}
 .pf .pf-package-stats .pf-stats-icon{font-size:18px;margin:0 1px;top:3px;}
+
+.pf .pf-footer{clear:both;border-top:1px solid #000000;padding:10px;font-size:14px;}
+.pf.pf-default .pf-footer{border-top-color:#F28D1A;}
+.pf .pf-footer .pf-pf-repo-link{float:right;}

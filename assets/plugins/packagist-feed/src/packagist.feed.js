@@ -88,6 +88,19 @@ var Packagist = (function(document, undefined) {
 			var list = document.createElement('ul');
 			list.setAttribute('class', 'pf-packages-list');
 			
+			var footerElement = document.createElement('div');
+			footerElement.setAttribute('class', 'pf-footer');
+			
+			var packagesFeedTitleElement = document.createTextNode('Public Packages');
+			footerElement.appendChild(packagesFeedTitleElement);
+			
+			var repositoryLinkElement = document.createElement('a');
+			repositoryLinkElement.setAttribute('href', 'https://github.com/htmldriven/packagist-feed/');
+			repositoryLinkElement.setAttribute('class', 'pf-pf-repo-link');
+			repositoryLinkElement.appendChild(document.createTextNode('Packagist Feed'));
+			
+			footerElement.appendChild(repositoryLinkElement);
+			
 			for (var i = 0; i < packages.length; i++) {
 				var packageName = packages[i];
 				methods.getAsyncPackageInfo(packageName, function(packageInfo) {
@@ -170,6 +183,8 @@ var Packagist = (function(document, undefined) {
 				
 				container.appendChild(noPackagesFoundAlertElement);
 			}
+			
+			container.appendChild(footerElement);
 		}
 	};
 	

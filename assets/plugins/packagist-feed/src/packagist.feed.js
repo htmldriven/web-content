@@ -39,13 +39,11 @@ var Packagist = (function (document, undefined) {
             return selector.charAt(0) === '#' ? document.getElementById(selector.substring(1)) : document.getElementsByClassName(selector.substring(1));
         },
         getAsyncPackageInfo: function (packageName, success) {
-            var packageUrl = 'https://cors-proxy.htmldriven.com/?url=https://packagist.org/packages/' + packageName + '.json';
+            var packageUrl = 'https://packagist.org/packages/' + packageName + '.json';
             this.sendRequest(
                 packageUrl,
                 function (data) {
-                    var body = JSON.parse(data.body);
-
-                    var packageInfo = body.package || null;
+                    var packageInfo = data.package || null;
                     var gitHubApiUrl = packageInfo.repository.replace('https://github.com', 'https://api.github.com/repos');
 
                     methods.sendRequest(
@@ -68,9 +66,7 @@ var Packagist = (function (document, undefined) {
             );
         },
         renderPackagesList: function (vendor, container, data) {
-            var body = JSON.parse(data.body);
-
-            var packages = body.packageNames;
+            var packages = data.packageNames;
 
             var headerElement = document.createElement('div');
             headerElement.setAttribute('class', 'pf-header');
@@ -201,7 +197,7 @@ var Packagist = (function (document, undefined) {
         var container = methods.getElement(selector);
 
         // due to cross-domain request restriction, mediator service is needed
-        var vendorPackagesUrl = 'https://cors-proxy.htmldriven.com/?url=https://packagist.org/packages/list.json?vendor=' + vendor;
+        var vendorPackagesUrl = 'https://packagist.org/packages/list.json?vendor=' + vendor;
 
         methods.sendRequest(
             vendorPackagesUrl,

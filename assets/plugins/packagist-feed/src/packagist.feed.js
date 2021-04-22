@@ -73,7 +73,7 @@ var Packagist = (function (document, undefined) {
 
             var packagistLogoElement = document.createElement('img');
             packagistLogoElement.setAttribute('class', 'pf-packagist-logo');
-            packagistLogoElement.setAttribute('src', 'https://packagist.org/bundles/packagistweb/img/logo-small.png');
+            packagistLogoElement.setAttribute('src', 'https://packagist.org/img/logo-small.png');
             headerElement.appendChild(packagistLogoElement);
 
             var vendorNameElement = document.createElement('div');

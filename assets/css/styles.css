@@ -454,6 +454,31 @@ iframe {
 .languages .item .fa {
   color: #79d19a;
 }
+/* Certifications section */
+.certifications .item {
+  margin-bottom: 30px;
+}
+.certifications .item:last-child {
+  margin-bottom: 0;
+}
+.certifications .item .title {
+  font-size: 16px;
+  margin-top: 0;
+}
+.certifications .item .authority {
+  font-family: "Lato", arial, sans-serif;
+  font-size: 13px;
+  color: #999;
+  font-weight: 600;
+}
+.certifications .item .authority .issue-date {
+  color: #b0b7bf;
+  font-weight: 500;
+}
+.certifications .item .credential-id {
+  font-size: 13px;
+  color: #999;
+}
 /* ======= Footer ======= */
 .footer {
   background: #32383e;
